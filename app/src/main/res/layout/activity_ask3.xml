@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_ask3"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.umerejaz.testapp.SolePropreitorship.Ask3"
+    android:orientation="vertical">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@color/colorPrimary">
+        <ImageView
+            android:id="@+id/iv_back"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:layout_gravity="center"
+            android:src="@drawable/ic_back"/>
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Sole Proprietor/Individual"
+            android:gravity="center"
+            android:textSize="28dp"
+            android:textColor="@color/white"/>
+
+
+    </LinearLayout>
+    <TextView
+        android:id="@+id/tv_info_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Does your bussiness need to file Form 720(Quarterly Fedral Excise Tax Return)?"
+        android:textColor="@color/colorPrimary"
+        android:layout_marginTop="20dp"
+        android:textSize="20sp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginBottom="10dp"
+        />
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/radio">
+        <RadioButton
+            android:id="@+id/btn_yes"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:text="Yes"
+            android:checked="false"
+            android:textSize="18sp"/>
+
+        <RadioButton
+            android:id="@+id/btn_no"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:text="No"
+            android:checked="false"
+            android:textSize="18sp"/>
+    </RadioGroup>
+
+</LinearLayout>

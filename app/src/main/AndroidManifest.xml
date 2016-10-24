@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.umerejaz.testapp">
+
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/splash_logo"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".Main.Splash">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".Main.login" />
+        <activity android:name=".Main.reset" />
+        <activity android:name=".SolePropreitorship.CreateAccount" />
+        <activity android:name=".SolePropreitorship.BussinessInformation" />
+        <activity android:name=".SolePropreitorship.StartBussinessDate" />
+        <activity android:name=".SolePropreitorship.AdditionalInformation" />
+        <activity android:name=".SolePropreitorship.Ask1" />
+        <activity android:name=".SolePropreitorship.Ask2" />
+        <activity android:name=".SolePropreitorship.Ask3" />
+        <activity android:name=".SolePropreitorship.Ask4" />
+        <activity android:name=".SolePropreitorship.Ask6" />
+        <activity android:name=".SolePropreitorship.Ask8" />
+        <activity android:name=".SolePropreitorship.PrincipalInformation" />
+        <activity android:name=".SolePropreitorship.CustomerAgreement" />
+        <activity android:name=".LLC.LLCInformation" />
+        <activity android:name=".LLC.BussinessAddress" />
+        <activity android:name=".LLC.ManagingMemberInformation" />
+        <activity android:name=".Main.trustee_information" />
+        <activity android:name=".Main.llc_customeragreement" />
+        <activity android:name=".Main.excutor_address" />
+        <activity android:name=".SolePropreitorship.npo_bussinessinfo" />
+        <activity android:name=".Main.infodeceasedindividual" />
+        <activity android:name=".Main.Trust_information" />
+        <activity
+            android:name=".Nav_Bar"
+            android:label="@string/title_activity_nav__bar"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <!--
+ ATTENTION: This was auto-generated to add Google Play services to your project for
+     App Indexing.  See https://g.co/AppIndexing/AndroidStudio for more information.
+        -->
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+
+        <activity android:name=".Main.SecureCheckout" />
+        <activity android:name=".Main.SecureCheckoutbyPaypal"></activity>
+    </application>
+
+</manifest>

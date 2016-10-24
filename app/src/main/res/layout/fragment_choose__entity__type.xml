@@ -1,0 +1,163 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:id="@+id/choose_entity_type"
+    tools:context="layout.Choose_Entity_Type"
+    >
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@color/platinum"
+            android:text="Sole Propreitor "
+            android:textSize="22dp"
+            android:textColor="@color/colorPrimary"
+            android:id="@+id/sole_propreitor"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@color/platinum"
+            android:text="LLC "
+            android:textSize="22dp"
+            android:textColor="@color/colorPrimary"
+            android:id="@+id/llc"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@color/platinum"
+            android:text="Trust"
+            android:textSize="22dp"
+            android:textColor="@color/colorPrimary"
+            android:id="@+id/trust"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@color/platinum"
+            android:text="Estate of Deceased Individual  "
+            android:textSize="22dp"
+            android:textColor="@color/colorPrimary"
+            android:id="@+id/estate_diseased"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@color/platinum"
+            android:text="Non Profit "
+            android:textSize="22dp"
+            android:textColor="@color/colorPrimary"
+            android:id="@+id/non_profit"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@color/platinum"
+            android:text="Partnership "
+            android:textSize="22dp"
+            android:textColor="@color/colorPrimary"
+            android:id="@+id/partnership"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            />
+
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@color/platinum"
+            android:text="Corporation "
+            android:textSize="22dp"
+            android:textColor="@color/colorPrimary"
+            android:id="@+id/corporation"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            />
+
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@color/platinum"
+            android:text="S-Corporation "
+            android:textSize="22dp"
+            android:textColor="@color/colorPrimary"
+            android:id="@+id/s_corporation"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@color/platinum"
+            android:text="Personal Service Corporation "
+            android:textSize="22dp"
+            android:textColor="@color/colorPrimary"
+            android:id="@+id/personal_service_corporation"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@color/platinum"
+            android:text="Church Controlled"
+            android:textSize="22dp"
+            android:textColor="@color/colorPrimary"
+            android:id="@+id/church_controlled"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            />
+
+    </LinearLayout>
+</ScrollView>
+
+</LinearLayout>

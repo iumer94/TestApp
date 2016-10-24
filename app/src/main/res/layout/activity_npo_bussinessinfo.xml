@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_npo_bussinessinfo"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.umerejaz.testapp.SolePropreitorship.npo_bussinessinfo"
+    android:orientation="vertical">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@color/colorPrimary">
+        <ImageView
+            android:id="@+id/iv_back"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_margin="10dp"
+            android:layout_gravity="center"
+            android:src="@drawable/ic_back"/>
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Sole Proprietor/Individual"
+            android:padding="10dp"
+            android:gravity="center"
+            android:textSize="24sp"
+            android:textColor="@color/white"/>
+
+
+    </LinearLayout>
+    <TextView
+        android:id="@+id/tv_info_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Bussiness Information (No PO Boxes)"
+        android:textColor="@color/colorPrimary"
+        android:layout_marginTop="20dp"
+        android:textSize="20sp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginBottom="10dp"
+        />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <EditText
+        android:id="@+id/et_trade_name"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="15dp"
+        android:layout_width="322dp"
+        android:layout_height="40dp"
+        android:hint="  Bussiness Name"
+        android:layout_marginBottom="10dp"
+        android:background="@color/platinum"
+        android:inputType="textCapWords"/>
+    <EditText
+        android:id="@+id/et_address"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="15dp"
+        android:layout_width="322dp"
+        android:layout_height="40dp"
+        android:layout_marginBottom="10dp"
+        android:hint="  Trade Name / Doing Bussines As"
+        android:background="@color/platinum"
+        android:inputType="textPostalAddress"/>
+    <Spinner
+        android:id="@+id/state_location"
+        android:layout_marginLeft="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_gravity="center"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="10dp"
+        android:background="@color/platinum"
+        ></Spinner>
+    <EditText
+        android:id="@+id/et_addres"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="15dp"
+        android:layout_width="322dp"
+        android:layout_marginBottom="10dp"
+        android:layout_height="40dp"
+        android:hint="  Address"
+        android:background="@color/platinum"
+        android:inputType="textCapWords"/>
+    <EditText
+        android:id="@+id/et_city"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="15dp"
+        android:layout_width="322dp"
+        android:layout_marginBottom="10dp"
+        android:layout_height="40dp"
+        android:hint="  City"
+        android:background="@color/platinum"
+        android:inputType="textCapWords"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <Spinner
+            android:id="@+id/state"
+            android:layout_marginLeft="20dp"
+            android:layout_width="170dp"
+            android:layout_height="40dp"
+            android:background="@color/platinum"
+            ></Spinner>
+        <EditText
+            android:id="@+id/et_zipcode"
+            android:layout_width="144dp"
+            android:layout_height="40dp"
+            android:hint="  Zip Code"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:background="@color/platinum"
+            android:inputType="number"/>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+    <EditText
+        android:id="@+id/et_country"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="15dp"
+        android:layout_width="322dp"
+        android:layout_height="40dp"
+        android:layout_marginBottom="10dp"
+        android:hint="  Country"
+        android:background="@color/platinum"
+        android:inputType="textCapWords"/>
+    <EditText
+        android:id="@+id/et_number"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="15dp"
+        android:layout_width="322dp"
+        android:layout_height="40dp"
+        android:hint="  Phone Number"
+        android:layout_marginBottom="10dp"
+        android:background="@color/platinum"
+        android:inputType="phone"/>
+    <CheckBox
+        android:id="@+id/mailing_Add"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:text="Mailling Add. different then Bus. Add.?"
+        android:textSize="16sp"
+        android:textColor="@color/silver"/>
+
+    <Button
+        android:id="@+id/next"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:padding="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Next"
+        android:textSize="16sp"
+        android:layout_gravity="bottom|center"/>
+    </LinearLayout>
+
+    </LinearLayout>
+    </ScrollView>
+</LinearLayout>
