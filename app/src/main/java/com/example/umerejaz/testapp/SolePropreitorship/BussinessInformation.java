@@ -50,7 +50,7 @@ public class BussinessInformation extends AppCompatActivity implements View.OnCl
     Spinner state, mailingstate;
     ImageView iv_back;
     TextView mainTitle;
-    String tittle;
+    String tittle,currenId;
     Strings list;
     String st_trade_name;
     String st_address;
@@ -223,13 +223,21 @@ public class BussinessInformation extends AppCompatActivity implements View.OnCl
                 else if(st_mailzipcode.isEmpty()){
                     et_mailingzipcode.setError("Please Enter valid mailing zipcode");
                 }
-                savedDataOnParse();
+                else {
+                    if(currenId == null)
+                        savedDataOnParse();
+                    else
+                        saveExistingData();
+                }
             }else if(NetUtil.isNetworkAvailable(this) == false )
             {
                 dialog.show();
             }
             else {
-                savedDataOnParse();
+                if(currenId == null)
+                    savedDataOnParse();
+                else
+                    saveExistingData();
             }
         }
 
@@ -244,7 +252,7 @@ public class BussinessInformation extends AppCompatActivity implements View.OnCl
         }
     }
 
-    public void savedDataOnParse() {
+    /*public void savedDataOnParse() {
         td = new transparentDialog(this, R.drawable.loading_blue);
         td.show();
         ParseTableName obj = new ParseTableName();
@@ -275,7 +283,7 @@ public class BussinessInformation extends AppCompatActivity implements View.OnCl
                                     if (e == null) {
                                         Toast.makeText(BussinessInformation.this, "Values Store Successfully", Toast.LENGTH_SHORT).show();
                                         td.dismiss();
-
+                                        currenId = Obj1.getObjectId();
                                             Intent i = new Intent(BussinessInformation.this, StartBussinessDate.class);
                                             i = i.putExtra("tittle", tittle);
                                             startActivity(i);
@@ -285,9 +293,115 @@ public class BussinessInformation extends AppCompatActivity implements View.OnCl
                             });
                         }
                     }
-                });
-}
+                });*/
+    public void saveExistingData()
+    {
+        ParseObject obj = new ParseObject("SolePropretior");
+        td = new transparentDialog(this, R.drawable.loading_blue);
+        td.show();
+        ParseQuery.getQuery("SolePropreitor").whereEqualTo("userID", ParseUser.getCurrentUser()).whereEqualTo("objectId", currenId)
+                .getFirstInBackground(new GetCallback<ParseObject>() {
+                    @Override
+                    public void done(ParseObject obj, final ParseException e) {
+                        if (e == null) {
 
+                            obj.put("tradeName", st_trade_name);
+                            obj.put("address", st_address);
+                            obj.put("city", st_city);
+                            obj.put("state",st_state);
+                            obj.put("zipCode",st_zipcode);
+                            obj.put("country",st_country);
+                            obj.put("phoneNumber",st_number);
+                            if(cb_mailing_Add.isChecked()) {
+                                obj.put("mailingAddress", st_mailingaddress);
+                                obj.put("mailingCity", st_mailingcity);
+                                obj.put("mailingState",st_mailstate);
+                                obj.put("mailingZipCode",st_mailzipcode);
+                                obj.put("mailingCountry",st_mailingcountry);
+                            }
+                            obj.saveInBackground(new SaveCallback() {
+                                @Override
+                                public void done(ParseException e) {
+                                    if (e == null)//means data save on parse
+                                    {
+                                        td.dismiss();
+                                        Toast.makeText(BussinessInformation.this, "SolePropretior data updated successfully", Toast.LENGTH_LONG).show();
+
+                                        Intent intent = new Intent(getApplicationContext(), StartBussinessDate.class);
+                                        intent.putExtra("tittle", "Sole Propretior");
+                                        intent.putExtra("objectId", currenId);
+                                        startActivity(intent);
+
+
+                                    } else {
+                                        td.dismiss();
+                                        Toast.makeText(BussinessInformation.this, "SolePropretior data wrt object is not saved", Toast.LENGTH_LONG).show();
+                                    }
+                                }
+                            });
+                        } else {
+                            td.dismiss();
+                            Toast.makeText(BussinessInformation.this, "Exception:" + e.toString(), Toast.LENGTH_LONG).show();
+                        }
+                    }
+                });
+
+    }
+    public void savedDataOnParse() {
+        td = new transparentDialog(this, R.drawable.loading_blue);
+        td.show();
+        ParseTableName obj1 = new ParseTableName();
+        obj1.setParseTableName(tittle);
+        final String tableNameStr = obj1.getParseTableName();
+
+        if (tableNameStr.equals("NotMatching")) {
+            td.dismiss();
+            Toast.makeText(BussinessInformation.this, "Table Name Not Matching", Toast.LENGTH_LONG).show();
+        } else {
+
+            final ParseObject parseObj = new ParseObject(tableNameStr);
+
+            if (ParseUser.getCurrentUser() == null) {
+                td.dismiss();
+            } else {
+                parseObj.put("userID", ParseUser.getCurrentUser());
+            }
+            parseObj.put("tradeName", st_trade_name);
+            parseObj.put("address", st_address);
+            parseObj.put("city", st_city);
+            parseObj.put("state",st_state);
+            parseObj.put("zipCode",st_zipcode);
+            parseObj.put("country",st_country);
+            parseObj.put("phoneNumber",st_number);
+            if(cb_mailing_Add.isChecked()) {
+                parseObj.put("mailingAddress", st_mailingaddress);
+                parseObj.put("mailingCity", st_mailingcity);
+                parseObj.put("mailingState",st_mailstate);
+                parseObj.put("mailingZipCode",st_mailzipcode);
+                parseObj.put("mailingCountry",st_mailingcountry);
+            }
+
+            parseObj.saveInBackground(new SaveCallback() {
+                @Override
+                public void done(ParseException e) {
+                    if (e == null)//means data save on parse
+                    {
+                        td.dismiss();
+                        Toast.makeText(BussinessInformation.this, "Bussiness Info Data is saved successfully", Toast.LENGTH_LONG).show();
+                        currenId = parseObj.getObjectId();
+                        Intent intent = new Intent(getApplicationContext(), StartBussinessDate.class);
+                        intent.putExtra("tittle", "Sole Propretior");
+                        intent.putExtra("objectId", currenId);
+                        startActivity(intent);
+                    } else {
+                        td.dismiss();
+                        Toast.makeText(BussinessInformation.this, "bussiness Info Data is not saved", Toast.LENGTH_LONG).show();
+                    }
+                }
+            });
+
+        }
+    }
     @Override
     public void onItemSelected(AdapterView<?> adapterView, View view, int position, long l) {
         String item = adapterView.getItemAtPosition(position).toString();
