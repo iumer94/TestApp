@@ -6,7 +6,7 @@
     tools:context="values.ProfileFargment">
     <TextView
         android:layout_width="match_parent"
-        android:layout_marginTop="5dp"
+        android:layout_marginTop="10dp"
         android:layout_marginLeft="10dp"
         android:text="@string/reviewtheinfo"
         android:textSize="21dp"

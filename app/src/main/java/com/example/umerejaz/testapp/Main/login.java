@@ -25,7 +25,7 @@ import com.parse.ParseUser;
 import com.example.umerejaz.testapp.SolePropreitorship.SessionManager;
 
 public class login extends AppCompatActivity implements View.OnClickListener{
-TextView forgot;
+    TextView forgot;
     Button login,ok;
     ImageView iv_back;
     EditText et_email, et_password;
@@ -35,9 +35,9 @@ TextView forgot;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_login);
-        ActionBar actionBar= getSupportActionBar();
-        actionBar.hide();
+            setContentView(R.layout.activity_login);
+            ActionBar actionBar= getSupportActionBar();
+            actionBar.hide();
         forgot = (TextView) findViewById(R.id.tv_forgot_pass);
         forgot.setOnClickListener(this);
         login=(Button) findViewById(R.id.login);
